@@ -1,1 +1,22 @@
 <!-- Put the HTML template for your page here! -->
+<!doctype html>
+<html>
+<head>
+	<link rel = "stylesheet" type="text/css" href="{{url_for('static', filename = 'style.css')}}">
+</head>
+<body>
+	{% if likes_same_sport == true %}
+		<h1>footbawl</h1>
+		<p>it's fun to play</p>
+	{% else %}
+		<h1>foooootbawl</h1>
+		<p>it's fun to look at</p>
+		<h2>greatest dumbos that play footwabl</h2>
+		<ul>
+			{% for i in players %}
+				<li> {{i}} </li>
+				{% endfor %}
+		</ul>
+	{%endif%}
+</body>
+</html>
